@@ -1,0 +1,26 @@
+[tool.black]
+line-length = 120
+skip-magic-trailing-comma = true
+target-version = ['py311']
+
+[tool.isort]
+src_paths = [
+    "apis",
+    "config_manager",
+    "services",
+    "tests",
+]
+line_length = 120
+multi_line_output = 3
+profile = "black"
+py_version = "all"
+
+[tool.vulture]
+min_confidence = 80
+paths = [
+    "apis", 
+    "config_manager",
+    "services",
+    "tests", 
+]
+sort_by_size = true
